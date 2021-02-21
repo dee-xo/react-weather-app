@@ -14,25 +14,26 @@ export default function Weather() {
 
   return (
     <div className="Weather">
-      <form className="mb-3">
-        <div className="row">
-          <div className="col-9">
-            <input
-              type="search"
-              placeholder="Type a city.."
-              className="form-control"
-              autoComplete="off"
-            />
+      <form className="search-form">
+          <div className="row">
+            <div className="col-6">
+              <input
+                type="search"
+                placeholder="Enter a city"
+                className="form-control"
+                autoComplete="off"
+              />
+            </div>
+            <div className="col-6">
+              <input
+                type="submit"
+                value="SEARCH"
+                className="form-control btn btn-secondary"
+              />
+            </div>
+            <div className="current-location-button"></div>
           </div>
-          <div className="col-3">
-            <input
-              type="submit"
-              value="Search"
-              className="btn btn-secondary"
-            />
-          </div>
-        </div>
-      </form>
+        </form>
       <div className="overview">
         <h1>{weatherData.city}</h1>
         <ul>
