@@ -41,3 +41,6 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+.source {
+  font-size: x-small;
+}
