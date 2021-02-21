@@ -54,6 +54,7 @@ li:first-letter {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-align: left;
 }
 .Weather {
   padding: 20px;
