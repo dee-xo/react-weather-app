@@ -47,11 +47,9 @@ export default function Weather() {
           height="150"
           alt="Clear"
         />
-         </div>
-        <span>-2</span>
-        <span>°C</span>|<span>°F</span>
-      <div>
+        
         <ul>
+          <li>{weatherData.temp}<span>°C</span>|<span>°F</span></li>
           <li>Humidity: {weatherData.humidity}%</li>
           <li>Wind: {weatherData.wind} km/h</li>
         </ul>
