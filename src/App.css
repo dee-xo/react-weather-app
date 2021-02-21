@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(20px + 10vmin);
+  font-size: calc(10px + 2vmin);
   color: white;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -52,5 +52,5 @@ li:first-letter {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: calc(20px + 10vmin);
+  font-size: calc(10px + 2vmin);
 }
