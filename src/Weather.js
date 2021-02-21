@@ -57,7 +57,7 @@ export default function Weather() {
         />
         
         <ul>
-          <li>{weatherData.temperature}°C|°F</li>
+          <li>{weatherData.temperature} °C|°F</li>
           <li>Humidity: {weatherData.humidity}%</li>
           <li>Wind: {weatherData.wind} km/h</li>
         </ul>
