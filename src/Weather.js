@@ -16,7 +16,7 @@ export default function Weather() {
     <div className="Weather">
       <form className="search-form">
           <div className="row">
-            <div className="col-6">
+            <div className="col-4">
               <input
                 type="search"
                 placeholder="Enter a city"
@@ -24,14 +24,14 @@ export default function Weather() {
                 autoComplete="off"
               />
             </div>
-            <div className="col-6">
+            <div className="col-4">
               <input
                 type="submit"
                 value="Search"
                 className="form-control btn btn-secondary"
               />
             </div>
-            <div className="col-6">
+            <div className="col-4">
               <input
               type="sumbit"
               value="Current"
