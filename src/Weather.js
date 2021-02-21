@@ -50,10 +50,10 @@ export default function Weather() {
       </div>
       <div className="Temp">
         <img
-          src="http://openweathermap.org/img/wn/10d@2x.png"
+          src="http://openweathermap.org/img/wn/03d@2x.png"
           width="150"
           height="150"
-          alt="Clear"
+          alt="Clouds"
         />
         
         <ul>
