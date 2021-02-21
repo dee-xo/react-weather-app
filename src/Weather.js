@@ -18,6 +18,13 @@ export default function Weather() {
           <div className="row">
             <div className="col-4">
               <input
+              type="sumbit"
+              value="Current"
+              className="form-control btn btn-secondary"
+              />
+            </div>
+            <div className="col-4">
+              <input
                 type="search"
                 placeholder="Enter a city"
                 className="form-control"
@@ -29,13 +36,6 @@ export default function Weather() {
                 type="submit"
                 value="Search"
                 className="form-control btn btn-secondary"
-              />
-            </div>
-            <div className="col-4">
-              <input
-              type="sumbit"
-              value="Current"
-              className="form-control btn btn-secondary"
               />
             </div>
           </div>
