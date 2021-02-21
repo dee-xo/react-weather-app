@@ -28,7 +28,7 @@ export default function Weather() {
             <input
               type="submit"
               value="Search"
-              className="btn btn-secondary w-100"
+              className="btn btn-secondary"
             />
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function Weather() {
         />
         
         <ul>
-          <li>{weatherData.temp}°C|°F</li>
+          <li>{weatherData.temperature}°C|°F</li>
           <li>Humidity: {weatherData.humidity}%</li>
           <li>Wind: {weatherData.wind} km/h</li>
         </ul>
