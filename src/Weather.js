@@ -56,8 +56,12 @@ export default function Weather() {
           <li>Wind: {weatherData.wind} km/h</li>
         </ul>
       </div>
+      <br />
       <div className="source">
-      Open sourced code by Dwayna Williams
+      <a href = "https://github.com/dee-xo/react-weather-app" target="_blank"
+        >Open-source</a
+      >
+      <span> code by Dwayna Williams</span>
     </div>
     </div>
     
