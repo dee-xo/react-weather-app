@@ -27,13 +27,20 @@ export default function Weather() {
             <div className="col-6">
               <input
                 type="submit"
-                value="SEARCH"
+                value="Search"
                 className="form-control btn btn-secondary"
               />
             </div>
-            <div className="current-location-button"></div>
+            <div className="col-6">
+              <input
+              type="sumbit"
+              value="Current"
+              className="form-control btn btn-secondary"
+              />
+            </div>
           </div>
         </form>
+        <br />
       <div className="overview">
         <h1>{weatherData.city}</h1>
         <ul>
