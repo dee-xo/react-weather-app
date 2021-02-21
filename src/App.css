@@ -49,3 +49,8 @@ li:first-letter {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.Weather {
+  padding: 20px;
+  border: 1px #ffffff;
+  border-radius: 80px;
+}
