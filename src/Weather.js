@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weather.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default function Weather() {
   let weatherData = {
@@ -14,6 +15,7 @@ export default function Weather() {
 
   return (
     <div className="Weather">
+      <div className="container">
       <form className="search-form">
           <div className="row">
             <div className="col-4">
@@ -70,6 +72,6 @@ export default function Weather() {
       <span> coded by Dwayna Williams</span>
     </div>
     </div>
-    
+    </div>
   );
   }
