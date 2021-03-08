@@ -11,12 +11,11 @@ export default function Weather(props) {
       ready: true,
       temperature:response.data.main.temp,
       humidity: response.data.main.humidity,
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       city: response.data.name,
       description:response.data.weather[0].description,
-      iconUrl: "https://ss1.gstatic.com/onebox/weather/64/partly_cloudy.png"
-
-
+      iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM-SDVTb7ubKCYasum6bWjipkAhgQ2o-2OLQ&usqp=CAU",
     });
   }
 
@@ -54,7 +53,7 @@ if (weatherData.ready) {
       <div className="overview">
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>{weatherData.date}</li>
+          <li></li>
           <li>{weatherData.description}</li>
         </ul>
       </div>
