@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.css";
+import axios from "axios";
 
-export default function Weather() {
-  let weatherData = {
-    city: "Toronto",
-    temperature: -5,
-    date: "Tuesday 10:00",
-    description: "Cloudy",
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-    humidity: 80,
-    wind: 10
-  };
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ready: false});
+  function handleResponse(response){
+    console.log(response.data);
+    setWeatherData({
+      ready: true,
+      temperature:response.data.main.temp,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+      description:response.data.weather[0].description,
+      iconUrl: "https://ss1.gstatic.com/onebox/weather/64/partly_cloudy.png"
 
+
+    });
+  }
+
+if (weatherData.ready) {
   return (
     <div className="Weather">
-      <div className="container">
+      
       <form className="search-form">
           <div className="row">
             <div className="col-4">
@@ -46,21 +54,20 @@ export default function Weather() {
       <div className="overview">
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>Last updated: {weatherData.date}</li>
+          <li>{weatherData.date}</li>
           <li>{weatherData.description}</li>
         </ul>
       </div>
-      <div className="Temp">
+        <div className="image">
         <img
-          src="http://openweathermap.org/img/wn/03d@2x.png"
-          width="150"
-          height="150"
-          alt="Clouds"
+          src={weatherData.iconUrl}
+          alt={weatherData.description}
         />
-        
+        </div>
+      <div className="temp">{weatherData.temperature}</div> 
+      <div className="info">
         <ul>
-          <li>{weatherData.temperature} °C|°F</li>
-          <li>Humidity: {weatherData.humidity}%</li>
+          <li>Humidity: {weatherData.humidity} %</li>
           <li>Wind: {weatherData.wind} km/h</li>
         </ul>
       </div>
@@ -72,6 +79,16 @@ export default function Weather() {
       <span> coded by Dwayna Williams</span>
     </div>
     </div>
-    </div>
+    
   );
+} else {
+ const apiKey = "f37c9ae6d4f383a5c710381821c1b245";
+  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(handleResponse); 
+
+  return "Loading...";
+}
+ 
+  
+  
   }
