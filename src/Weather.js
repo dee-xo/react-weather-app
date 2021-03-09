@@ -90,16 +90,18 @@ if (weatherData.ready) {
         <br />
         <WeatherInfo data={weatherData} />
         <WeatherForecast city={weatherData.city}/>
+
+        <div className="source">
+      <a href = "https://github.com/dee-xo/react-weather-app" target="_blank"
+        >Open-source</a
+      >
+      <span> coded by Dwayna Williams</span>
+    </div>
       </div>
   );
 } else {
   search ();
   return "Loading...";
 }
-  <div className="source">
-      <a href = "https://github.com/dee-xo/react-weather-app" target="_blank"
-        >Open-source</a
-      >
-      <span> coded by Dwayna Williams</span>
-    </div>
+  
     }
