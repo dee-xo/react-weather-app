@@ -16,9 +16,9 @@ return(
         <div className="image">
           <WeatherIcon code={props.data.icon} />
         </div>
-      <div className="temp">
+      <div>
         <WeatherTemperature celsius={props.data.temperature} />
-        </div> 
+      </div>
       <div className="info">
         <ul>
           <li>Humidity: {props.data.humidity} %</li>
