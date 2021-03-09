@@ -36,7 +36,8 @@ function handleSubmit(event) {
   search();
 }
 
-  function searchLocation(event) {
+  
+function searchLocation(event) {
     event.preventDefault();
     function retrieveCoords(position) {
       let latitude = position.coords.latitude;
@@ -44,7 +45,9 @@ function handleSubmit(event) {
       let apiKey = `f37c9ae6d4f383a5c710381821c1b245`;
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
       axios.get(apiUrl).then(handleResponse);
-    }
+  
+  }
+
     navigator.geolocation.getCurrentPosition(retrieveCoords);
   }
 
